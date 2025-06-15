@@ -6,7 +6,7 @@ Feel free to download and modify the game in any way you want.
 
 INSTRUCTIONS:
 1) GO to your Terminal/Pycharm/Any IDE Terminal and install curses with this comand "pip install windows-curses"
-2) Open the main_game.py file OR type "python main_game.py" on the IDE's terminal
+2) Open the main_game.py file OR type "python main_game.py" on the IDE's terminal OR the easiest Thing would be Play Using main_game.exe if you don;t have python installed ot don't want to install modules and all
 3) Once the window pops up, maximize it (full screen). If you don't do that the game may crush.
 
 
