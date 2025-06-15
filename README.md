@@ -1,26 +1,94 @@
-# Mafia-TheTerminalGame
+# 🎭 Mafia: Terminal Edition
 
-Note: 
-Most AsCII art was sourced from all over the internet and I don't remember where I found each art work. 
-Feel free to download and modify the game in any way you want. 
+**Mafia: Terminal Edition** is a console-based story-mode game inspired by the classic social deduction game *Mafia*. In this version, players immerse themselves in a suspenseful narrative by selecting one of three roles — each shaping a unique path through the story. The game is designed for fun, strategy, and entertainment.
 
+## 🧩 About the Game
 
-INSTRUCTIONS:
-1) GO to your Terminal/Pycharm/Any IDE Terminal and install curses with this comand "pip install windows-curses" or do "pip install -r requirements.txt" in your cmd
-2) Open the main_game.py file OR type "python main_game.py" on the IDE's terminal
-3) Once the window pops up, maximize it (full screen). If you don't do that the game will crush.
+This is not just a simple Mafia simulation — it’s a narrative-driven experience that requires the player to understand the identity and nature of each role. Originally a real-life social experiment, *Mafia* has been transformed here into a fully playable terminal-based game where storytelling, role decisions, and social logic come together.
 
-INSTRUCTIONS FOR AUTOMATIC INSTALL:
-1) go to "https://github.com/NISHITSUMAN/Mafia-Terminal-Edition" and install using the releases provided there of same program.
+---
 
+## 🛠️ Built With
 
-Things You Should Know ABOUT THE GAME - (Based on wikipedia)
+- **Python 3**
+- **HTML**
+- **TeX** (for internal structuring and stylized text)
 
-* In mafia, there are 2 teams: the mafia and the townspeople. The mafia try to eliminate the townspeople while the townspeople try to guess who’s in the mafia.
-* Each mafia game includes a detective and a doctor. The detective can guess a mafia member each turn while the doctor can save a townsperson each turn.
-* Mafia is played in night cycles and day cycles. In night cycles, mafia members eliminate (or “kill”) townspeople while everyone’s eyes are closed.
-* In day cycles, players accuse and eliminate people they think might be a part of the mafia. Accused players are allowed to give defenses and a vote takes place.
+---
 
+## 🖥️ Supported Platforms
 
+- **Windows 8 / 8.1 / 10 / 11**
+- **All major Linux distributions**
+
+---
+
+## 🚀 Installation & Setup
+
+### ✅ For Windows Users
+1. Visit the [Releases](https://github.com/NISHITSUMAN/Mafia-Terminal-Edition/releases/tag/v1.4) section of this repository.
+2. Download the latest `setup.exe` file.
+3. Run the installer.
+4. After installation, navigate to `C:\Program Files\Mafia - Terminal Edition` to find the launcher.
+5. Launch the game and start playing.
+
+### 🐧 For Linux Users
+1. Download the source code as a ZIP from this repository.
+2. Extract the ZIP file.
+3. Navigate to the extracted folder.
+4. Run the executable file provided.
+
+---
+
+## 🎮 How to Play
+
+1. Launch the game.
+2. Choose **"Play Game"** from the menu.
+3. Enter your **character name**.
+4. Select your **role** (from 3 unique roles).
+5. Follow the immersive story and make choices that affect the outcome.
+
+---
 
 ![Screenshot (123)](https://user-images.githubusercontent.com/55671529/232162005-f420e9c2-182f-42fe-a47e-6edf73e2fb19.png)
+
+## ✨ Features
+
+- 🕵️ Role Assignment System  
+- 🧵 Interactive Storyline  
+- 🗳️ Voting Mechanism to Identify and Eliminate Mafia  
+- 🧥 Unique "Eating Clothes" Scene  
+- 🎮 Future mini-games planned
+
+---
+
+## 🔧 Contributing
+
+Contributions are welcome and appreciated!  
+If you'd like to contribute:
+1. Fork this repository.
+2. Create a new branch.
+3. Submit a Pull Request.
+
+> 📝 Please remember to credit the original developer for the core game logic.
+
+---
+
+## 📂 Repository
+
+> The game is officially released on my personal GitHub repository:  
+> 🔗 [https://github.com/NISHITSUMAN/Mafia-Terminal-Edition]
+
+---
+
+## 📜 License
+
+This project currently does **not use any open license**. All rights reserved by the developer.
+
+---
+
+## 🙌 A Final Word
+
+This game is built just for **fun** and **creative experimentation**. It’s a blend of storytelling and social strategy. Play smart, enjoy the roles, and watch the story unfold!
+
+---
