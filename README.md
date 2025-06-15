@@ -1,19 +1,18 @@
-# Mafia:Terminal Edition
+# Mafia-TheTerminalGame
 
 Note: 
+Most AsCII art was sourced from all over the internet and I don't remember where I found each art work. 
 Feel free to download and modify the game in any way you want. 
 
 
-INSTRUCTIONS FOR MANNUAL INSTALLATION:
-1) GO to your Terminal/Pycharm/Any IDE Terminal and install curses with this comand "pip install windows-curses"
-2) Open the main_game.py file OR type "python main_game.py" on the IDE's terminal.
-3) Once the window pops up, maximize it (full screen). If you don't do that the game may crash.
-   
+INSTRUCTIONS:
+1) GO to your Terminal/Pycharm/Any IDE Terminal and install curses with this comand "pip install windows-curses" or do "pip install requirements.txt" in your cmd
+2) Open the main_game.py file OR type "python main_game.py" on the IDE's terminal
+3) Once the window pops up, maximize it (full screen). If you don't do that the game will crush.
 
-INSTRUCTIONS FOR AUTOMATIC INSTALLATION:
-1) Just Download "Mafia_setup" of v1.4 from "Releases" tab of Github.
-2) Intall it as you install normal applications.
-3) You will find your game in "C\Program Files\Mafia- Terminal Version". There would be a file named as "main_game.exe" just click on it and enjoy.
+INSTRUCTIONS FOR AUTOMATIC INSTALL:
+1) go to "https://github.com/NISHITSUMAN/Mafia-Terminal-Edition" and install using the releases provided there of same program.
+
 
 Things You Should Know ABOUT THE GAME - (Based on wikipedia)
 
