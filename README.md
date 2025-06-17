@@ -30,13 +30,18 @@ This is not just a simple Mafia simulation — it’s a narrative-driven experie
 2. Download the latest `setup.exe` file.
 3. Run the installer.
 4. After installation, navigate to `C:\Program Files\Mafia - Terminal Edition` to find the launcher.
-5. Launch the game and start playing.
+5. Launch the game using "main_game.exe" file and start playing.
 
 ### 🐧 For Linux Users
 1. Download the source code as a ZIP from this repository.
-2. Extract the ZIP file.
-3. Navigate to the extracted folder.
-4. Run the executable file provided.
+2. Extract the ZIP file
+3. Install Python using Command- ```
+ sudo apt install python3 python3-pip ```
+4. In Terminal enter the command ```
+ pip install uni-curses ```
+5. Now, Navigate to the extracted folder(of sourse code) within terminal.
+6. Enter Command ```
+ python3 main_game.py ```
 
 ---
 
