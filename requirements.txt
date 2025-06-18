@@ -1,1 +1,1 @@
-windows-curses
+uni-curses
