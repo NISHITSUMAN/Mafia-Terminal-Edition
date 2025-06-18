@@ -1,3 +1,5 @@
-#!/bin/bash
-echo "Welcome to Mafia: Terminal Edition!"
-echo "Run the game using: python3 main_game.py"
+{
+  "name": "Mafia Terminal",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "chmod +x .devcontainer/postCreateCommand.sh && .devcontainer/postCreateCommand.sh"
+}
