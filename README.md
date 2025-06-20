@@ -29,11 +29,8 @@ This is not just a simple Mafia simulation — it’s a narrative-driven experie
 > ⚠️ **IMPORTANT: MAXIMIZE YOUR TERMINAL WINDOW BEFORE PLAYING. OTHERWISE, THE GAME MAY BREAK OR CRASH.**
 
 ### ✅ For Windows Users
-1. Visit the [Releases](https://github.com/NISHITSUMAN/Mafia-Terminal-Edition/releases/tag/v2.6) section of this repository.
-2. Download the latest `setup.exe` file.
-3. Run the installer.
-4. After installation, navigate to `C:\Program Files\Mafia - Terminal Edition` to find the launcher.
-5. Launch the game and start playing.
+1. Download and extract the source code ZIP.
+2. Click on "main_game.exe" and enjoy the game.
 
 ### 🐧 For Linux Users
 1. Download the source code as a ZIP from this repository.
