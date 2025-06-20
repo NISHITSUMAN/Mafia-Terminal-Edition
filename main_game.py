@@ -1,4 +1,16 @@
 import curses
+
+def safe_addstr(stdscr, y, x, text, attr=None):
+    height, width = stdscr.getmaxyx()
+    if y < height and x + len(text) < width:
+        try:
+            if attr:
+                stdscr.addstr(y, x, text, attr)
+            else:
+                stdscr.addstr(y, x, text)
+        except curses.error:
+            pass
+
 import time
 import menu
 from curses import wrapper
@@ -419,14 +431,14 @@ def main(stdscr):
         # Print a box for the pictures shown in the game
         stdscr.clear()
         stdscr.refresh()
-        stdscr.addstr(2, 28, "+--------------------------------------------------------------------------------------+")
-        stdscr.addstr(3, 28, "|                                                                                      |")
-        stdscr.addstr(4, 28, "|                                                                                      |")
-        stdscr.addstr(5, 28, "|                                                                                      |")
-        stdscr.addstr(6, 28, "|                                                                                      |")
-        stdscr.addstr(7, 28, "|                                                                                      |")
-        stdscr.addstr(8, 28, "|                                                                                      |")
-        stdscr.addstr(9, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 2, 28, "+--------------------------------------------------------------------------------------+")
+        safe_addstr(stdscr, 3, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 4, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 5, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 6, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 7, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 8, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 9, 28, "|                                                                                      |")
         stdscr.addstr(10, 28,
                       "|                                                                                      |")
         stdscr.addstr(11, 28,
@@ -454,31 +466,31 @@ def main(stdscr):
         stdscr.addstr(22, 28,
                       "+--------------------------------------------------------------------------------------+")
 
-        stdscr.addstr(2, 117, "+----------------------------------------+")
-        stdscr.addstr(3, 117, "|               Game info                |")
-        stdscr.addstr(4, 117, "|                                        |")
-        stdscr.addstr(5, 117, "|                                        |")
-        stdscr.addstr(6, 117, "|                                        |")
-        stdscr.addstr(7, 117, "|                                        |")
-        stdscr.addstr(8, 117, "|                                        |")
-        stdscr.addstr(9, 117, "|                                        |")
-        stdscr.addstr(10, 117, "|                                        |")
-        stdscr.addstr(11, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 2, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 3, 117, "|               Game info                |")
+        safe_addstr(stdscr, 4, 117, "|                                        |")
+        safe_addstr(stdscr, 5, 117, "|                                        |")
+        safe_addstr(stdscr, 6, 117, "|                                        |")
+        safe_addstr(stdscr, 7, 117, "|                                        |")
+        safe_addstr(stdscr, 8, 117, "|                                        |")
+        safe_addstr(stdscr, 9, 117, "|                                        |")
+        safe_addstr(stdscr, 10, 117, "|                                        |")
+        safe_addstr(stdscr, 11, 117, "+----------------------------------------+")
 
-        stdscr.addstr(12, 117, "+----------------------------------------+")
-        stdscr.addstr(13, 117, "|               Inventory                |")
-        stdscr.addstr(14, 117, "|                                        |")
-        stdscr.addstr(15, 117, "|                                        |")
-        stdscr.addstr(16, 117, "|                                        |")
-        stdscr.addstr(17, 117, "|                                        |")
-        stdscr.addstr(18, 117, "|                                        |")
-        stdscr.addstr(19, 117, "|                                        |")
-        stdscr.addstr(20, 117, "|                                        |")
-        stdscr.addstr(21, 117, "|                                        |")
-        stdscr.addstr(22, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 12, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 13, 117, "|               Inventory                |")
+        safe_addstr(stdscr, 14, 117, "|                                        |")
+        safe_addstr(stdscr, 15, 117, "|                                        |")
+        safe_addstr(stdscr, 16, 117, "|                                        |")
+        safe_addstr(stdscr, 17, 117, "|                                        |")
+        safe_addstr(stdscr, 18, 117, "|                                        |")
+        safe_addstr(stdscr, 19, 117, "|                                        |")
+        safe_addstr(stdscr, 20, 117, "|                                        |")
+        safe_addstr(stdscr, 21, 117, "|                                        |")
+        safe_addstr(stdscr, 22, 117, "+----------------------------------------+")
 
         # Show the name of the NPC that speaks
-        stdscr.addstr(23, 29, f"Talking with:  {z}               Reliability:  {r}", curses.A_BOLD)
+        safe_addstr(stdscr, 23, 29, f"Talking with:  {z}               Reliability:  {r}", curses.A_BOLD)
         stdscr.refresh()
 
         # Print the dialogue box
@@ -531,7 +543,7 @@ def main(stdscr):
             time.sleep(0.07)
 
         # Ask for any input and clear the box
-        stdscr.addstr(28, 88, f"Press any key to continue!", curses.A_BOLD)
+        safe_addstr(stdscr, 28, 88, f"Press any key to continue!", curses.A_BOLD)
         stdscr.getch()
 
     # Function activates only if the player a) Meets with Veronica and b) took the mysterious paper from the Ben's house
@@ -539,14 +551,14 @@ def main(stdscr):
         # Print a box for the pictures shown in the game
         stdscr.clear()
         stdscr.refresh()
-        stdscr.addstr(2, 28, "+--------------------------------------------------------------------------------------+")
-        stdscr.addstr(3, 28, "|                                                                                      |")
-        stdscr.addstr(4, 28, "|                                                                                      |")
-        stdscr.addstr(5, 28, "|                                                                                      |")
-        stdscr.addstr(6, 28, "|                                                                                      |")
-        stdscr.addstr(7, 28, "|                                                                                      |")
-        stdscr.addstr(8, 28, "|                                                                                      |")
-        stdscr.addstr(9, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 2, 28, "+--------------------------------------------------------------------------------------+")
+        safe_addstr(stdscr, 3, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 4, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 5, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 6, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 7, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 8, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 9, 28, "|                                                                                      |")
         stdscr.addstr(10, 28,
                       "|                                                                                      |")
         stdscr.addstr(11, 28,
@@ -574,31 +586,31 @@ def main(stdscr):
         stdscr.addstr(22, 28,
                       "+--------------------------------------------------------------------------------------+")
 
-        stdscr.addstr(2, 117, "+----------------------------------------+")
-        stdscr.addstr(3, 117, "|               Game info                |")
-        stdscr.addstr(4, 117, "|                                        |")
-        stdscr.addstr(5, 117, "|                                        |")
-        stdscr.addstr(6, 117, "|                                        |")
-        stdscr.addstr(7, 117, "|                                        |")
-        stdscr.addstr(8, 117, "|                                        |")
-        stdscr.addstr(9, 117, "|                                        |")
-        stdscr.addstr(10, 117, "|                                        |")
-        stdscr.addstr(11, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 2, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 3, 117, "|               Game info                |")
+        safe_addstr(stdscr, 4, 117, "|                                        |")
+        safe_addstr(stdscr, 5, 117, "|                                        |")
+        safe_addstr(stdscr, 6, 117, "|                                        |")
+        safe_addstr(stdscr, 7, 117, "|                                        |")
+        safe_addstr(stdscr, 8, 117, "|                                        |")
+        safe_addstr(stdscr, 9, 117, "|                                        |")
+        safe_addstr(stdscr, 10, 117, "|                                        |")
+        safe_addstr(stdscr, 11, 117, "+----------------------------------------+")
 
-        stdscr.addstr(12, 117, "+----------------------------------------+")
-        stdscr.addstr(13, 117, "|               Inventory                |")
-        stdscr.addstr(14, 117, "|                                        |")
-        stdscr.addstr(15, 117, "|                                        |")
-        stdscr.addstr(16, 117, "|                                        |")
-        stdscr.addstr(17, 117, "|                                        |")
-        stdscr.addstr(18, 117, "|                                        |")
-        stdscr.addstr(19, 117, "|                                        |")
-        stdscr.addstr(20, 117, "|                                        |")
-        stdscr.addstr(21, 117, "|                                        |")
-        stdscr.addstr(22, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 12, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 13, 117, "|               Inventory                |")
+        safe_addstr(stdscr, 14, 117, "|                                        |")
+        safe_addstr(stdscr, 15, 117, "|                                        |")
+        safe_addstr(stdscr, 16, 117, "|                                        |")
+        safe_addstr(stdscr, 17, 117, "|                                        |")
+        safe_addstr(stdscr, 18, 117, "|                                        |")
+        safe_addstr(stdscr, 19, 117, "|                                        |")
+        safe_addstr(stdscr, 20, 117, "|                                        |")
+        safe_addstr(stdscr, 21, 117, "|                                        |")
+        safe_addstr(stdscr, 22, 117, "+----------------------------------------+")
 
         # Show the name of the NPC that speaks
-        stdscr.addstr(23, 29, f"Talking with:  {z}               Reliability:  {r}", curses.A_BOLD)
+        safe_addstr(stdscr, 23, 29, f"Talking with:  {z}               Reliability:  {r}", curses.A_BOLD)
         stdscr.refresh()
 
         # Print the dialogue box
@@ -650,7 +662,7 @@ def main(stdscr):
             time.sleep(0.07)
 
         # Ask for any input and clear the box
-        stdscr.addstr(28, 88, f"Press any key to continue!", curses.A_BOLD)
+        safe_addstr(stdscr, 28, 88, f"Press any key to continue!", curses.A_BOLD)
         stdscr.getch()
 
     # UI takes care of the games screen and stats
@@ -659,14 +671,14 @@ def main(stdscr):
         # Print a box for the pictures shown in the game
         stdscr.clear()
         stdscr.refresh()
-        stdscr.addstr(2, 28, "+--------------------------------------------------------------------------------------+")
-        stdscr.addstr(3, 28, "|                                                                                      |")
-        stdscr.addstr(4, 28, "|                                                                                      |")
-        stdscr.addstr(5, 28, "|                                                                                      |")
-        stdscr.addstr(6, 28, "|                                                                                      |")
-        stdscr.addstr(7, 28, "|                                                                                      |")
-        stdscr.addstr(8, 28, "|                                                                                      |")
-        stdscr.addstr(9, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 2, 28, "+--------------------------------------------------------------------------------------+")
+        safe_addstr(stdscr, 3, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 4, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 5, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 6, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 7, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 8, 28, "|                                                                                      |")
+        safe_addstr(stdscr, 9, 28, "|                                                                                      |")
         stdscr.addstr(10, 28,
                       "|                                                                                      |")
         stdscr.addstr(11, 28,
@@ -694,31 +706,31 @@ def main(stdscr):
         stdscr.addstr(22, 28,
                       "+--------------------------------------------------------------------------------------+")
 
-        stdscr.addstr(2, 117, "+----------------------------------------+")
-        stdscr.addstr(3, 117, "|               Game info                |")
-        stdscr.addstr(4, 117, "|                                        |")
-        stdscr.addstr(5, 117, "|                                        |")
-        stdscr.addstr(6, 117, "|                                        |")
-        stdscr.addstr(7, 117, "|                                        |")
-        stdscr.addstr(8, 117, "|                                        |")
-        stdscr.addstr(9, 117, "|                                        |")
-        stdscr.addstr(10, 117, "|                                        |")
-        stdscr.addstr(11, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 2, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 3, 117, "|               Game info                |")
+        safe_addstr(stdscr, 4, 117, "|                                        |")
+        safe_addstr(stdscr, 5, 117, "|                                        |")
+        safe_addstr(stdscr, 6, 117, "|                                        |")
+        safe_addstr(stdscr, 7, 117, "|                                        |")
+        safe_addstr(stdscr, 8, 117, "|                                        |")
+        safe_addstr(stdscr, 9, 117, "|                                        |")
+        safe_addstr(stdscr, 10, 117, "|                                        |")
+        safe_addstr(stdscr, 11, 117, "+----------------------------------------+")
 
-        stdscr.addstr(12, 117, "+----------------------------------------+")
-        stdscr.addstr(13, 117, "|               Inventory                |")
-        stdscr.addstr(14, 117, "|                                        |")
-        stdscr.addstr(15, 117, "|                                        |")
-        stdscr.addstr(16, 117, "|                                        |")
-        stdscr.addstr(17, 117, "|                                        |")
-        stdscr.addstr(18, 117, "|                                        |")
-        stdscr.addstr(19, 117, "|                                        |")
-        stdscr.addstr(20, 117, "|                                        |")
-        stdscr.addstr(21, 117, "|                                        |")
-        stdscr.addstr(22, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 12, 117, "+----------------------------------------+")
+        safe_addstr(stdscr, 13, 117, "|               Inventory                |")
+        safe_addstr(stdscr, 14, 117, "|                                        |")
+        safe_addstr(stdscr, 15, 117, "|                                        |")
+        safe_addstr(stdscr, 16, 117, "|                                        |")
+        safe_addstr(stdscr, 17, 117, "|                                        |")
+        safe_addstr(stdscr, 18, 117, "|                                        |")
+        safe_addstr(stdscr, 19, 117, "|                                        |")
+        safe_addstr(stdscr, 20, 117, "|                                        |")
+        safe_addstr(stdscr, 21, 117, "|                                        |")
+        safe_addstr(stdscr, 22, 117, "+----------------------------------------+")
 
         # Show the name of the NPC that speaks
-        stdscr.addstr(23, 29, f"Talking with:  {z}               Reliability:  {r}", curses.A_BOLD)
+        safe_addstr(stdscr, 23, 29, f"Talking with:  {z}               Reliability:  {r}", curses.A_BOLD)
         stdscr.refresh()
 
         # Print the dialogue box
@@ -770,7 +782,7 @@ def main(stdscr):
             time.sleep(0.07)
 
         # Ask for any input and clear the box
-        stdscr.addstr(28, 88, f"Press any key to continue!", curses.A_BOLD)
+        safe_addstr(stdscr, 28, 88, f"Press any key to continue!", curses.A_BOLD)
         stdscr.getch()
 
     # Function that will allow player to interrogate each individual
