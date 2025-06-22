@@ -20,7 +20,7 @@ This is not just a simple Mafia simulation — it’s a narrative-driven experie
 
 - **Windows 8 / 8.1 / 10 / 11**
 - **All major Linux distributions**
-- **macOS**
+- **MacOS**
 
 ---
 
