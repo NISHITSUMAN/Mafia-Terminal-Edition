@@ -1,7 +1,7 @@
 {
   "name": "Mafia Terminal Game",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "pip install -r requirements.txt && chmod +x .devcontainer/postCreateCommand.sh && .devcontainer/postCreateCommand.sh",
   "customizations": {
     "vscode": {
       "extensions": ["ms-python.python"]
