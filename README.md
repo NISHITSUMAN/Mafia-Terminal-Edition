@@ -116,7 +116,7 @@ If you'd like to contribute:
 ## 📂 Repository
 
 > The game is officially released on my personal GitHub repository:  
-> 🔗 [Insert your GitHub repo link here]
+> 🔗 [https://github.com/NISHITSUMAN/Mafia-Terminal-Edition]
 
 ---
 
